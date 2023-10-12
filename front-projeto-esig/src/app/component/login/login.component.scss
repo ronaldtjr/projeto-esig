@@ -1,0 +1,18 @@
+mat-card {
+    margin: 5% 20% 5% 20%;
+    padding: 5%;
+    text-align: center;
+    align-items: center;
+
+    mat-label {
+        margin-right: 2%;
+    }
+
+    button {
+        max-width: 40%;
+    }
+
+    .error {
+        color: red;
+    }
+}

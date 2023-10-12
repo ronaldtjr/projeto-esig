@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="linha">
+        <mat-label>Título</mat-label>
+        <mat-form-field>
+            <input matInput [(ngModel)]="titulo">
+        </mat-form-field>
+    </div>
+    <div class="linha">
+        <mat-label>Descrição</mat-label>
+        <mat-form-field class="area">
+            <textarea matInput [(ngModel)]="descricao"></textarea>
+        </mat-form-field>
+    </div>
+
+    <div class="linha grande">
+        <div class="sublinha">
+            <mat-label>Responsável</mat-label>
+            <mat-form-field appearance="fill" class="responsavel">
+                <mat-select [(ngModel)]="newResp" name="value">
+                    <mat-option *ngFor="let resp of responsavel" [value]="resp.id">
+                        {{resp.nome}}
+                    </mat-option>
+                </mat-select>
+               
+            </mat-form-field>
+        </div>
+        <div class="sublinha">
+            <mat-label>Prioridade</mat-label>
+            <mat-form-field appearance="fill">
+                <mat-select [(ngModel)]="newPrior" name="value">
+                    <mat-option *ngFor="let prior of prioridade" [value]="prior.id">
+                        {{prior.valor}}
+                    </mat-option>
+                </mat-select>
+                
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="linha">
+        <mat-label>Deadline</mat-label>
+        <mat-form-field>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <input matInput [matDatepicker]="picker" [value]="deadline">
+        </mat-form-field>
+        <mat-datepicker #picker></mat-datepicker>
+    </div>
+    <button mat-raised-button (click)="cadastrar()">Cadastrar</button>
+</div>
