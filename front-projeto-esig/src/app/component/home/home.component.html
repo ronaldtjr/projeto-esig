@@ -11,7 +11,7 @@
                 <div class="sublinha">
                     <mat-label>Título/Descrição</mat-label>
                     <mat-form-field>
-                        <input matInput [(ngModel)]="filtro.titulo">
+                        <input matInput [(ngModel)]="filtro.titulo" >
                     </mat-form-field>
                 </div>
                 <div></div>
@@ -35,7 +35,7 @@
                     <mat-label>Situação</mat-label>
                     <mat-form-field appearance="fill">
                         <mat-select [(ngModel)]="filtro.situacao.id" name="value">
-                            <mat-option *ngFor="let sit of situacao" [value]="sit.id">
+                            <mat-option *ngFor="let sit of situacao" [value]="sit.id" >
                                 {{sit.valor}}
                             </mat-option>
                         </mat-select>

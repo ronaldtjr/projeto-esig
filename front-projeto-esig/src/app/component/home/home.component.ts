@@ -88,7 +88,7 @@ export class HomeComponent {
     let novoFiltro={
       id: this.filtro.numero,
       titulo: this.filtro.titulo,
-      responsavel: this.filtro.responsavel,
+      responsavel: this.filtro.responsavel==''?null: this.filtro.responsavel,
       situacao: parseInt(this.filtro.situacao.id)-1
 
 
